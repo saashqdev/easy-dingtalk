@@ -1,0 +1,28 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\OpenDev\Api\User;
+
+use Delightful\EasyDingTalk\OpenDev\Api\OpenDevApiAbstract;
+use Delightful\SdkBase\Kernel\Constant\RequestMethod;
+
+/**
+ * Get user information by login-free authorization code.
+ * @see https://open.dingtalk.com/document/isvapp/obtain-the-userid-of-a-user-by-using-the-log-free
+ */
+class UserInfoByCodeApi extends OpenDevApiAbstract
+{
+    public function getMethod(): RequestMethod
+    {
+        return RequestMethod::Post;
+    }
+
+    public function getUri(): string
+    {
+        return '/topapi/v2/user/getuserinfo';
+    }
+}

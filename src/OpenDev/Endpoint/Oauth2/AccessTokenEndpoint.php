@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\OpenDev\Endpoint\Oauth2;
+
+use Delightful\EasyDingTalk\OpenDev\Endpoint\OpenDevEndpoint;
+
+class AccessTokenEndpoint extends OpenDevEndpoint
+{
+    public function get(): string
+    {
+        return $this->getAccessToken();
+    }
+
+    public function getCorp(string $corpId, string $suitTicket): string
+    {
+        return $this->getCorpAccessToken($corpId, $suitTicket);
+    }
+}

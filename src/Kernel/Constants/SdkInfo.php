@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\Kernel\Constants;
+
+class SdkInfo
+{
+    public const NAME = 'easy-ding-talk';
+
+    public const VERSION = '1.0.0';
+}

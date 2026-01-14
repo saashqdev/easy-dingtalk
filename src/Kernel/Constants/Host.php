@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\Kernel\Constants;
+
+class Host
+{
+    public const API_DING_TALK = 'https://api.dingtalk.com';
+
+    public const OPEN_DING_TALK = 'https://oapi.dingtalk.com';
+}

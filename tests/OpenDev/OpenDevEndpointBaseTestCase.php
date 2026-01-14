@@ -1,0 +1,66 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\Test\OpenDev;
+
+use Delightful\EasyDingTalk\OpenDevFactory;
+use Delightful\EasyDingTalk\Test\Mock\Container;
+use Delightful\SdkBase\SdkBase;
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @internal
+ * @coversNothing
+ */
+class OpenDevEndpointBaseTestCase extends TestCase
+{
+    protected function createOpenDevFactory(string $appName = 'default'): OpenDevFactory
+    {
+        return new OpenDevFactory($appName, $this->createSdkBase());
+    }
+
+    protected function getCorpId(): string
+    {
+        return 'xxx';
+    }
+
+    protected function getSuitTicket(): string
+    {
+        return 'xxx';
+    }
+
+    private function createSdkBase(): SdkBase
+    {
+        $configs = [
+            'sdk_name' => 'dingtalk-sdk',
+            'applications' => [
+                'crop' => [
+                    'type' => 'open_dev',
+                    'options' => [
+                        'app_key' => 'xxx',
+                        'app_secret' => 'xxx',
+                        'callback_config' => [
+                            'token' => 'xxx',
+                            'aes_key' => 'xxx',
+                        ],
+                    ],
+                ],
+                'first' => [
+                    'type' => 'open_dev',
+                    'options' => [
+                        'app_key' => 'xxx',
+                        'app_secret' => 'xxx',
+                        'callback_config' => [
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $container = new Container();
+        return new SdkBase($container, $configs);
+    }
+}

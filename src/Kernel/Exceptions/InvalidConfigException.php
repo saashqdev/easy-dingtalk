@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * Copyright (c) Be Delightful , Distributed under the MIT software license
+ */
+
+namespace Delightful\EasyDingTalk\Kernel\Exceptions;
+
+use Delightful\EasyDingTalk\Kernel\Constants\ErrorCode;
+use Throwable;
+
+class InvalidConfigException extends EasyDingTalkException
+{
+    public function __construct(string $message = 'Invalid configuration', int $code = ErrorCode::INVALID_CONFIG, ?Throwable $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+    }
+}
