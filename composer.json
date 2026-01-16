@@ -1,7 +1,7 @@
 {
   "name": "bedelightful/easy-dingtalk",
   "description": "Package description here.",
-  "license": "Apache-2.0",
+  "license": "Apache License 2.0",
   "authors": [
     {
       "name": "lihq1403",
@@ -29,7 +29,7 @@
   },
   "autoload": {
     "psr-4": {
-      "BeDelightful\\EasyDingTalk\\": "src"
+      "Delightful\\EasyDingTalk\\": "src"
     },
     "files": [
       "src/Kernel/Utils/Functions.php"
@@ -37,7 +37,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "BeDelightful\\EasyDingTalk\\Test\\": "tests/"
+      "Delightful\\EasyDingTalk\\Test\\": "tests/"
     }
   },
   "repositories": [
